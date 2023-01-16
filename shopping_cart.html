@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <style>
+body{
+    background-color: rgb(252, 221, 203);
+}
+.flex_myCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  width: 100%;
+}
+p{
+    text-align: center;
+}
+#imageInCart{
+    height: 200px;
+    width: 200px;
+    padding-left: 50px;
+}
+#buttonPayNow{
+    font-size: 50px;
+    width: 500px;
+}
+#removeListing{
+    border-style: solid;
+    background-color: red;
+    width: 30px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="flex-upBar" style="justify-content: left;"  >
+        <text style="font-family: cursive;flex-basis: 8%;">Stony Sticcs</text>
+        <a href="index.html"><img src="exit.png"  width="23"></a>
+        
+        <a style="flex-basis: 8%;" href="customer.html" >Back to shopping</a>
+    </div>
+
+    <div class="flex_myCart">
+    <img src="bag.png" height="50" >
+    <h1 style="text-align: center;font-family: cursive;">My cart</h1>
+    </div>
+
+    <div class="grid">
+        <p>Product image</p>
+        <p>Product name</p>
+        <p>Quantity</p>
+        <p>Price per one item</p>
+        <p>Overall price</p>
+    </div>
+
+    <div width="100%" style="border-top-style: solid;padding-bottom: 10px;"></div>
+
+    <div class="grid" style="align-items: center;">
+
+        <img id="imageInCart" src="coolStick.png">
+        <p> Cool stick </p>
+        <p> 3 </p>
+        <p> 36627,99 € </p>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <p> 109.883,97 € </p>
+            <img id="removeListing" src="cart.png">
+        </div>
+        
+
+        <img id="imageInCart" src="boulders.png">
+        <p> Three boulders </p>
+        <p> 2 </p>
+        <p> 0,99 €</p>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <p> 1,98 €</p>
+            <img id="removeListing" src="cart.png">
+        </div>
+        
+
+        <img id="imageInCart"src="rock.png">
+        <p> Friendly rock </p>
+        <p> 70 </p>
+        <p> 1099,99 €</p>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <p> 76.999,3 €</p>
+            <img id="removeListing" src="cart.png">
+        </div>
+        
+    </div>
+
+    <div width="100%" style="border-style: solid;"></div>
+
+    <div class="grid">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p style="font-size: 50px;"><b>Total:</b></p>
+        <p style="font-size: 50px;">186.885,25 €</p>
+    </div>
+
+    <div style="display: flex;flex-direction: row; justify-content: center;">
+        <button id="buttonPayNow">
+        >> Pay now!<<
+        </button>
+    </div>
+    
+</body>
+</html>

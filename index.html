@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            height: 100%;
+            margin: 0px;
+        }
+        body{
+            background-color: rgb(211, 117, 107);
+            background-image: url("coolStick.png");
+            height: 100%;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        div{
+          margin: 10px; 
+        }
+        button{
+            margin: 5px, 10px;
+            background-color: rgb(168, 209, 209);
+        }
+        button:hover{
+            background-color: greenyellow;
+            
+        }
+        #s{
+            position: relative;
+            left: 53px;
+            margin-top: 5px;
+        }
+        
+        a:hover{
+            color: rgb(255, 255, 255);
+        }
+        .main{
+            background-color: rgb(255, 195, 161);
+            width: 550px;
+            height: 400px;
+            /* height: 100%;
+            margin: 0px; */
+            
+            
+            padding-top: 1px;
+            padding-left: 10px;
+            padding-bottom: 1px;
+            
+            border: 3px solid black;
+            border-radius: 25px;
+        }
+        .inside{
+            transform: scale(1.6);
+            position: relative;
+            right: -210px;
+            top: 80px;
+        }
+        #logo{
+            position: relative;
+            top: -20px;
+            height: 100px;
+            
+        }
+        #logoDiv{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            right: 3%;
+
+        }
+        #name{
+            font-size: 70px;
+            font-family: cursive;
+            color: rgb(225, 208, 132);
+            position: relative;
+            top: 40px;
+
+            
+        }
+        #a{
+            position: relative;
+            color: rgb(225, 208, 132);
+        }
+        .window{
+            position: relative;
+            right: -4px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="logoDiv">
+        <h1 id="name">Stony Sticcs</h1>
+        <h2 id="a">Sticks. Rocks. Pebbles? WE have it!</h2>
+    </div>
+    
+    <div class="main">
+        <h1 style="font-size: 40px;">Login page</h1>
+        <div class="inside">
+            <div>
+            <label for="u" class="scale">Username:</label>
+            <input id="u"  type="text" placeholder="Your Username" required>
+        </div>
+        <div>
+            <label for="password" class="scale">Password:   </label>
+            <input type="password" class="window" placeholder="Password" required>
+        </div>
+        <form action="customer.html" class="scale" style="display: inline">
+            <button class="scale" type="submit">Log in as a customer</button>
+        </form>
+        <form action="supplier.html" class="scale" style="display: inline">
+            <button type="submit" class="scale">Log in as a supplier</button>
+        </form>
+        
+        <br>
+        <div id="s">
+            <a href="signUp.html" id="signup">
+                Don't have an account?</a>
+        </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

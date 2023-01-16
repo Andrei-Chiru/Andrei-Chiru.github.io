@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color:rgb(241, 247, 181);
+            display: flex;
+            justify-content: center;
+        }
+        div.form{
+            background-color: rgb(253, 138, 138);
+            
+            display: flex;
+            border: 2px solid blue;
+            flex-direction: column;
+        }
+        
+        .field{
+            position: relative;
+            right: -10px;
+            margin: 3%;
+            width: 80%;
+            font-family: 'Trebuchet MS';
+        }
+        #gender{
+            margin-bottom: 10px;
+        }
+        #bio{
+            margin: 4%;
+            font-family: 'Trebuchet MS';
+        }
+        #sign{
+            position:absolute;
+            left: 20px;
+            font:300;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 20px;
+            background-color: blanchedalmond
+        }
+        button:hover{
+            background-color: greenyellow;
+        }
+        #exit{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1 id="sign">Sign Up</h1>
+        <form>
+            <div class="form">
+                <label for="userid">User ID: </label>
+                <input type="text", id="userid", class="field">
+
+                <label for="password">Password:   </label>
+                <input type="password", id="password",
+                class="field" required>
+
+                <label for="name">Name: </label>
+                <input type="text", id="name", class="field">
+
+                <label for="address">Address: </label>
+                <input type="text", id="address", class="field">
+                
+                <label for="country">Country of residence: </label>
+                <!-- <input type="text", id="country", class="field"> -->
+                <select id="country", name="country", class="field">
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Other">USA</option>
+                </select>
+
+                <label for="zip">ZIP code: </label>
+                <input type="text", id="zip", class="field">
+
+                <label for="email">Email: </label>
+                <input type="text", id="email", class="field">
+
+                <label for="sex">Sex:</label>
+                <div id="gender">
+                    <input form="Male" type="radio" id="male" value="male">
+                    <label for="male">Male</label> <br>
+
+                    <input form="Female" type="radio" id="female" value="female">
+                    <label for="female">Female</label> <br>
+
+                    <input form="other" type="radio" id="other" value="other">
+                    <label for="other">Gender is an abstract construct created by society</label>
+                </div>
+            
+                <label for="language">Language</label>
+                <select id="language", name="language", class="field">
+                    <option value="Netherlands">English</option>
+                    <option value="Bulgaria">Bulgarian</option>
+                    <option value="Other">Dutch</option>
+                </select>
+
+                <label for="bio">Bio:</label>
+                <textarea rows="10" cols="30" name="bio" id="bio"></textarea>
+                
+            </div>
+            
+        </form>
+
+        <div id="exit">
+
+            <form action="customer.html">
+                <button type="submit">Log in as a customer</button>
+            </form>
+            <form action="supplier.html" style="display: inline;">
+                <button type="submit">Log in as a supplier</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

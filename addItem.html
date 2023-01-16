@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(241, 247, 181);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #main{
+            display: grid;
+            grid-template-columns:auto;
+            
+            background-color: rgb(253, 138, 138);
+            border: solid black 2px;
+            width: 270px;
+            position: relative;
+            top: 80px;
+        }
+        
+        .field{
+            margin: 5px;
+            width: 250px;
+            
+        }
+        
+        .submit{
+            position: relative;
+            top: 90px;
+            margin: 5px;
+        }
+        #buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 25%;
+            align-items: center;
+            position: relative;
+            right: -40px;
+        }
+        .submit{
+            border-radius: 10px;
+            
+            width: 90px;
+        }
+        #cancel:hover{
+            background-color: red;
+            cursor: pointer;
+        }
+        #add:hover{
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+        #big{
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="big">
+        <h1 id="name">Add Item Form</h1>
+    <div id="main">
+        <label for="Category">Category: </label>
+        <select id="category", name="category", class="field">
+            <option value="Stick">Stick</option>
+            <option value="Stone">Stone</option>
+        </select><br>
+        <label for="name">Name: </label>
+        <input type="text" class="field">
+
+        <label for="price">Price: </label>
+        <input type="text" class="field">
+
+        <label for="quantity">Quantiy: </label>
+        <input type="text" class="field">
+
+        <label for="desc">Description:</label>
+        <textarea rows="10" cols="30" name="desc" class="field"></textarea>
+
+        <button class="field">Upload Image</button>
+
+    </div>
+    <div id="buttons">
+        <form action="supplier.html" style="display: inline;">
+            <button type="submit" class="submit" id="cancel">Cancel</button>
+        </form>
+        <form action="supplier.html" style="display: inline;">
+            <button type="submit" class="submit" id="add">Add item</button>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>

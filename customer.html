@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+  </head>
+<style> 
+body{
+  height: 100vh;
+  background-color: rgb(252, 221, 203);
+  background-size:100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#searchBar{
+  height: 100%;
+  text-align:left;
+  flex-basis: 70%;
+
+}
+
+.grid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: auto auto;
+  width: 600px;
+  border-style: solid;
+}
+.photoInGrid{
+  width: 300px;
+  height: 200px;
+}
+.itemDescription{
+  text-align: left;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.flexInGrid{
+  display: flex;
+  flex-direction: column;
+}
+#shopCartRight{
+  background-color: greenyellow;
+  border-style: solid;
+  align-self: flex-end;
+  margin: 20px;
+  cursor: pointer;
+}
+#shopCartLeft{
+  background-color: greenyellow;
+  border-style: solid;
+  align-self: flex-start;
+  margin: 20px;
+  cursor: pointer;
+}
+</style>
+<body>
+  
+    <div class="flex-upBar">
+      <text style="font-family: cursive;flex-basis: 8%;">Stony Sticcs</text>
+      <a href="index.html"><img src="exit.png"  width="23"></a>
+      <input  id="searchBar" type="search" placeholder="Search...">
+      <button id="searchButton" style="flex-basis: 10%">Search</button>
+      <a id="cartLogo" style="flex-basis:10%," href="shopping_cart.html"><img src="cart.png", height="100%"></a>
+    </div>
+
+    
+    <h1 style="text-align: center;font-family: cursive;">Products</h1>
+  
+    <div style="display: flex; flex-direction: row; align-items: center;">
+      <p>Filter on:</p>
+
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <p> Price</p>
+        <input type="range" min="1" max="100000" step="100" value="10000">
+      </div>
+      
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <p> Supplier</p>
+        <select name="suppliers" width="100px">
+          <option value="Stone Cutters"> Stone Cutters</option>
+          <option value="Wooders">Wooders</option>
+          <option value="Cool thingys">Cool thingys</option>
+        </select>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <p> Number of stars</p>
+        <input type="range" min="0" max="5" step="0.5" value="3">
+      </div>
+    </div>
+
+    <div class="grid">
+      <img class="photoInGrid"src="stick2.png">
+      <div class="flexInGrid">
+        <p class="itemDescription" style="text-align:center">
+        Product name: Thick stick<br>
+        Description: Who doesn't need a stick?
+        Price: 4,99 €
+        Rating: ★☆☆☆☆
+        </p>
+        <img id="shopCartRight"src="cart.png" width="30">
+        
+      </div>
+
+      <div class="flexInGrid">
+        <p class="itemDescription" style="text-align:center">
+          Product name: Friendly rock<br>
+          Description: No friends? <br>Buy a friend that listens.<br>
+          Price: 1099,99 €
+          Rating: ★★★★☆
+        </p>
+        <img id="shopCartLeft"src="cart.png" width="30">
+      </div>
+      <img class="photoInGrid" src="rock.png">
+      
+      <img class="photoInGrid" src="boulders.png">
+      <div class="flexInGrid">
+        <p class="itemDescription">
+          Product name: Three boulders<br>
+          Description: One boulder is good, three is excelent<br>
+          Price: 0,99 €
+          Rating: ★★★☆☆
+        </p>
+        <img id="shopCartRight"src="cart.png" width="30">
+      </div>
+      <div>
+        <p class="itemDescription">
+          Product name: Cool stick<br>
+          Description: <br>Just a cool stick.<br>
+          Price: 36627,99 €
+          Rating: ★★★★★
+        </p>
+        <img id="shopCartLeft"src="cart.png" width="30">
+      </div> 
+      <img class="photoInGrid" src="coolStick.png">
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchBar.css">
+    <title>Document</title>
+
+    <style>
+        .flex{
+  display: flex;
+  background-color: rgb(255, 195, 161);
+  border: 10px solid rgb(255, 195, 161);
+  justify-content:space-between; 
+  height: 50px; 
+}
+#rock{
+    display: inline;
+    z-index: -1;
+}
+#arock{
+    position:absolute;
+}
+#arock:hover{
+    opacity: 0;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+body{
+  height: 100vh;
+  background-color: rgb(252, 221, 203);
+  background-size:100% 100%;
+  margin: 0px;
+}
+
+#changingPhoto {
+    height: 200px;
+    width: 190px;
+}
+
+.remove{
+    position: relative;
+    bottom: 10px;
+    right: -10px;
+
+}
+.remove:hover{
+    background-color: rgb(231, 88, 88);
+}
+.list{
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    margin: 10px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.catalogue{
+    display: flex;
+}
+.info{
+    background-color: rgb(255, 195, 161);
+    position: relative;
+}
+#bar{
+    background-color: rgb(240, 153, 125);
+    height: 40px;
+    display: flex;
+    justify-content:space-between;
+    
+}
+#upperMenu{
+    display: flex;
+    flex-direction: column;
+}
+#myStuff{
+    position: relative;
+    top: -20px;
+    right: -5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.addItem{
+    height: 25px;
+    position: relative;
+    top: 5px;
+    
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="upperMenu">
+        <div class="flex-upBar">
+            <a href="index.html"><img src="exit.png"  width="23"></a>
+            
+            <input  id="searchBar" type="search" placeholder="Search...">
+            <button id="searchButton" style="flex-basis: 10%">Search</button>
+            
+          </div>
+        <div id="bar">
+            <h1 id="myStuff">My products:</h1>
+            <form action="addItem.html">
+                <button class="addItem">Add Item</button>
+            </form>
+            
+        </div>
+    </div>
+    
+    
+    <div class="catalogue">
+        <div class="list">
+            <img src="coolStick.png" alt="stick" width="190" >
+            <div class="info">
+                <h3 class="name">A cool stick</h3>
+                <button class="remove">Remove listing</button>
+            </div>
+        </div>
+        <div class="list">
+            <img src="coolStick.png" alt="stick" width="190" >
+            <div class="info">
+                <h3 class="name">A cool stick</h3>
+                <button class="remove">Remove listing</button>
+            </div>
+        </div>
+        <div class="list" >
+            <div id="changingPhoto">
+                <img src="Arock.png" alt="stick" width="190"height=190px id="arock" >
+                <img src="theRock.png" alt="Dwayne the rock Johnson" width="190" id="rock">
+            </div>
+            
+            
+            <div class="info">
+                <h3 class="name">A misterious rock</h3>
+                <form>
+                    <button class="remove">Remove listing</button>
+                </form>
+                
+            </div>
+        </div>
+      </div>
+</body>
+</html>
